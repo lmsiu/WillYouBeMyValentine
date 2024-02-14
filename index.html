@@ -15,26 +15,42 @@
         <text id="pleaseText">
 
         </text>
-        <img class="yesGIFs" src="https://media.giphy.com/media/N37n3oOx2EUkpX1Vaj/giphy.gif?cid=ecf05e4759xmajptv6ac2azwa1864o5mm5fg2pgfnfvuxnz5&ep=v1_gifs_search&rid=giphy.gif&ct=g" id="yesGIF1">
+        <img class="yesGIFs" src="https://media.giphy.com/media/N37n3oOx2EUkpX1Vaj/giphy.gif?cid=ecf05e4759xmajptv6ac2azwa1864o5mm5fg2pgfnfvuxnz5&ep=v1_gifs_search&rid=giphy.gif&ct=g" id="yesGIF0">
+        <img class="yesGIFs" src="milk.gif" id="yesGIF1">
+        <img class="yesGIFs" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3Y0OTRhem9nZWRzaGd0enpubmdyM21iYnV6a3ZoaTI0MzNkZ2RuZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/c76IJLufpNwSULPk77/giphy.gif" id="yesGIF2">
+        <img class="yesGIFs" src="https://media.giphy.com/media/gDfteqLchLcRTtjAD7/giphy.gif?cid=790b7611kv494azogedshgtzznngr3mbbuzkvhi2433dgdnd&ep=v1_gifs_search&rid=giphy.gif&ct=g" id="yesGIF3">
+        <img class="yesGIFs" src="https://media.giphy.com/media/SY8asU9xWlmgFolmSs/giphy.gif?cid=790b76112t8xndduopmqnsiurgu530mqrx7ykzmm1as25bte&ep=v1_gifs_search&rid=giphy.gif&ct=g" id="yesGIF4">
+        <img class="yesGIFs" src="https://media.giphy.com/media/9zoB22ReUoYCUDPMCL/giphy.gif?cid=790b7611yz1eirjac5ag5rfrkvwxauv211mnsbrx0tif3ujn&ep=v1_gifs_search&rid=giphy.gif&ct=g" id="yesGIF5">
+
         <br>
         <img src="2-removebg-preview.png" id="yesbtn" onClick="yesClick()" alt="a pink candy heart with the word yes that you can click">
         <img src="3-removebg-preview.png" id="nobtn" onClick="noClick()" alt="a pink candy heart with the word yes that you can click">
 
         <script>
             var pleaseString = "";
+            var currentGif = "";
             function noClick(){
+                // Check if there is already an image displayed and hide it if so
+                if(currentGif){
+                    document.getElementById(currentGif).style.display = 'none';
+                }
+                
                 pleaseString = pleaseString + " Please? ";
                 document.getElementById("pleaseText").textContent = pleaseString;
             }
 
             function yesClick(){
-                var gif = Math.floor(Math.random * 3);
-                var currentGif = "yesGIF" + 1;
+                var gif = Math.floor(Math.random() * 6);
+
+                // Check if there is already an image displayed and hide it if so
+                if(currentGif){
+                    document.getElementById(currentGif).style.display = 'none';
+                }
+
+                currentGif = "yesGIF" + gif.toString();
                 document.getElementById("pleaseText").textContent = "Lovely!";
                 document.getElementById(currentGif).style.display = 'block';
                 pleaseString = "";
-
-
             }
         </script>
     </body>
