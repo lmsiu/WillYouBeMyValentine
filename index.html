@@ -15,6 +15,7 @@
         <text id="pleaseText">
 
         </text>
+        <br>
         <img class="yesGIFs" src="https://media.giphy.com/media/N37n3oOx2EUkpX1Vaj/giphy.gif?cid=ecf05e4759xmajptv6ac2azwa1864o5mm5fg2pgfnfvuxnz5&ep=v1_gifs_search&rid=giphy.gif&ct=g" id="yesGIF0">
         <img class="yesGIFs" src="milk.gif" id="yesGIF1">
         <img class="yesGIFs" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3Y0OTRhem9nZWRzaGd0enpubmdyM21iYnV6a3ZoaTI0MzNkZ2RuZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/c76IJLufpNwSULPk77/giphy.gif" id="yesGIF2">
@@ -34,12 +35,14 @@
                 if(currentGif){
                     document.getElementById(currentGif).style.display = 'none';
                 }
-                
+
+                // add pleases for the number of times they click no
                 pleaseString = pleaseString + " Please? ";
                 document.getElementById("pleaseText").textContent = pleaseString;
             }
 
             function yesClick(){
+                // makes a random number from 0-5
                 var gif = Math.floor(Math.random() * 6);
 
                 // Check if there is already an image displayed and hide it if so
@@ -48,8 +51,11 @@
                 }
 
                 currentGif = "yesGIF" + gif.toString();
+
                 document.getElementById("pleaseText").textContent = "Lovely!";
-                document.getElementById(currentGif).style.display = 'block';
+                document.getElementById(currentGif).style.display = 'inline-block';
+
+                // reset the please string
                 pleaseString = "";
             }
         </script>
