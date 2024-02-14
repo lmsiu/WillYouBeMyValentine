@@ -2,5 +2,11 @@ body {
     background-color: pink;
     color: darkred;
     font-family: cursive;
+    text-align: center;
 
+}
+
+.yesGIFs{
+    display: none;
+    text-align: center;
 }

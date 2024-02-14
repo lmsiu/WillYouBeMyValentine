@@ -12,12 +12,29 @@
     <body>
         <h1> Will You Be My Valentine? </h1>
         <br>
-        <text>
+        <text id="pleaseText">
 
         </text>
+        <img class="yesGIFs" src="https://media.giphy.com/media/N37n3oOx2EUkpX1Vaj/giphy.gif?cid=ecf05e4759xmajptv6ac2azwa1864o5mm5fg2pgfnfvuxnz5&ep=v1_gifs_search&rid=giphy.gif&ct=g" id="yesGIF1">
         <br>
-        <img src="2-removebg-preview.png" id="yesbtn" alt="a pink candy heart with the word yes that you can click">
-        <img src="3-removebg-preview.png" id="nobtn" alt="a pink candy heart with the word yes that you can click">
+        <img src="2-removebg-preview.png" id="yesbtn" onClick="yesClick()" alt="a pink candy heart with the word yes that you can click">
+        <img src="3-removebg-preview.png" id="nobtn" onClick="noClick()" alt="a pink candy heart with the word yes that you can click">
+
+        <script>
+            var pleaseString = "";
+            function noClick(){
+                pleaseString = pleaseString + " Please? ";
+                document.getElementById("pleaseText").textContent = pleaseString;
+            }
+
+            function yesClick(){
+                document.getElementById("pleaseText").textContent = "Lovely!";
+                document.getElementById("yesGIF1").style.display = 'block';
+                pleaseString = "";
+
+
+            }
+        </script>
     </body>
 
     
