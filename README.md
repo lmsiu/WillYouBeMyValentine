@@ -1,5 +1,9 @@
 # WillYouBeMyValentine
 
+## A site that asks, will you be my Valentine?
+Users can choose between yes or no buttons.
+Access the site [here](https://lmsiu.github.io/WillYouBeMyValentine/)
+
 I do not own any of the GIFs used here :)
 GIF sources:
 - https://media.giphy.com/media/N37n3oOx2EUkpX1Vaj/giphy.gif?cid=ecf05e4759xmajptv6ac2azwa1864o5mm5fg2pgfnfvuxnz5&ep=v1_gifs_search&rid=giphy.gif&ct=g 
