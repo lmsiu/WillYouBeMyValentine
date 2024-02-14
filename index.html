@@ -28,8 +28,10 @@
             }
 
             function yesClick(){
+                var gif = Math.floor(Math.random * 3);
+                var currentGif = "yesGIF" + 1;
                 document.getElementById("pleaseText").textContent = "Lovely!";
-                document.getElementById("yesGIF1").style.display = 'block';
+                document.getElementById(currentGif).style.display = 'block';
                 pleaseString = "";
 
 
